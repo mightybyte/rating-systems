@@ -1,0 +1,36 @@
+name:           ratings
+version:        0.1
+synopsis:       Implementations of several different rating systems
+
+description:
+  Implementations of several different rating systems
+
+license:        BSD3
+license-file:   LICENSE
+author:         Doug Beardsley
+maintainer:     mightybyte@gmail.com
+build-type:     Simple
+cabal-version:  >= 1.6
+homepage:       https://github.com/mightybyte/ratings
+category:       Text
+
+extra-source-files:
+  LICENSE
+
+Library
+  hs-source-dirs: src
+
+  exposed-modules:
+    Ratings.Elo
+    Ratings.Glicko
+    Ratings.Types
+
+  build-depends:
+    base
+
+  ghc-prof-options: -prof -auto-all
+  ghc-options: -Wall -fwarn-tabs
+
+source-repository head
+  type:     git
+  location: git://github.com/mightybyte/ratings.git
