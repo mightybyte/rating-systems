@@ -2,6 +2,7 @@
 
 module Ratings.Glicko
   ( Glicko(..)
+  , initialGlicko
   , HasGlicko(..)
   , updateGlicko
   ) where
@@ -23,11 +24,11 @@ data Glicko = Glicko
 -- for Glicko like this:
 --
 -- > instance HasGlicko Glicko where
--- >   mkGlicko = Glicko           
+-- >   mkGlicko = Glicko
 -- >   glickoRating = _glickoRating
 -- >   glickoRD = _glickoRD
 -- >   glickoC _ = 34.6
--- 
+--
 -- Alternatively, if you really want to avoid the orphan instance you can use
 -- a newtype wrapper around Glicko.
 class HasGlicko a where

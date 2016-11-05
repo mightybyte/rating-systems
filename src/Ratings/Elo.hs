@@ -3,7 +3,8 @@
 module Ratings.Elo
   ( Elo(..)
 --  , HasElo(..)
-  , updateElo
+  , updateEloGame
+  , updateEloMatch
   ) where
 
 
@@ -29,6 +30,6 @@ updateEloGame k opp (Score s) me = Elo $ Rating $
 updateEloMatch :: Double -> [(Elo, Score)] -> Elo -> Elo
 updateEloMatch k games me = foldr f me games
   where
-    f (opp, s) i = updateElo k opp s i
+    f (opp, s) i = updateEloGame k opp s i
 
 
