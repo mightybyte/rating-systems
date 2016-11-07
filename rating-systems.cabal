@@ -29,7 +29,6 @@ Library
   build-depends:
     base
 
-  ghc-prof-options: -prof -auto-all
   ghc-options: -Wall -fwarn-tabs
 
 source-repository head
