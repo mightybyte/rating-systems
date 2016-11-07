@@ -5,7 +5,7 @@ module Ratings.Types
   , RD(..)
   , Score(..)
   , Result(..)
-  , res
+  , resultScore
   ) where
 
 
@@ -34,10 +34,10 @@ data Result = Win | Loss | Draw
 
 ------------------------------------------------------------------------------
 -- | Convenient function for converting a Result to a Score.
-res :: Result -> Score
-res Win = Score 1
-res Loss = Score 0
-res Draw = Score (1/2)
+resultScore :: Result -> Score
+resultScore Win = Score 1
+resultScore Loss = Score 0
+resultScore Draw = Score (1/2)
 
 
 
