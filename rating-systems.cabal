@@ -1,9 +1,10 @@
 name:           rating-systems
 version:        0.1
-synopsis:       Implementations of several different rating systems
+synopsis:       Implementations of several rating systems: Elo, Glicko, etc
 
 description:
-  Implementations of several different rating systems
+  This package contains implementations of several rating systems for
+  estimating the skill of players of multi-player games..  
 
 license:        BSD3
 license-file:   LICENSE
